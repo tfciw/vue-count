@@ -1,0 +1,29 @@
+{
+	"code": "category",
+	"data": [
+		{
+			"id": "001",
+			"for": "out",
+			"name": "早餐",
+			"iconfont": "&#xe6eb;"
+		},
+		{
+			"id": "002",
+			"for": "out",
+			"name": "午餐",
+			"iconfont": "&#xe6eb;"
+		},
+		{
+			"id": "003",
+			"for": "out",
+			"name": "晚餐",
+			"iconfont": "&#xe6eb;"
+		},
+		{
+			"id": "004",
+			"for": "in",
+			"name": "工资",
+			"iconfont": "&#xe6eb;"
+		}
+	]
+}
