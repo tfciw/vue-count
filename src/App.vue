@@ -1,16 +1,18 @@
 <template>
 	<div id="app">
 		<div id="main">
-			<router-view></router-view>
+			<transition :name="'pop-' + (direction === 'forward' ? 'in' : 'out')">
+				<router-view class="router-view"></router-view>
+			</transition>
 		</div>
 		<tab-footer></tab-footer>
-		<Count></Count>
+		<Count @refresh="refresh"></Count>
 	</div>
 </template>
 
 <script>
-import tabFooter from '@/components/tabFooter'
-import Count from '@/components/Count'
+import tabFooter from '@/components/TabFooter/TabFooter'
+import Count from '@/components/Count/Count'
 import { fullScreen } from '@/common/js/dom'
 export default {
 	components: {
@@ -19,10 +21,21 @@ export default {
 	},
 	mounted: function() {
 		fullScreen()
+	},
+	computed: {
+		direction() {
+			return this.$store.state.vux.direction
+			// return 'out'
+		}
+	},
+	methods: {
+		refresh() {
+			location.reload()
+		}
 	}
 }
 </script>
 
 <style>
-
+	
 </style>

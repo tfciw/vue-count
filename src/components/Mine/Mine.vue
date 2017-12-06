@@ -1,7 +1,8 @@
 <template>
-	<div class="head_info">
+	<div>
+		<div class="head_info">
 		<a href="javascript:;" class="photo">
-			<img src="../common/images/rock.jpg" alt="">
+			<img src="../../common/images/rock.jpg" alt="">
 		</a>
 		<p class="name">tfciw</p>
 		<div class="head_bot">
@@ -20,19 +21,19 @@
 				</li>
 			</ul>
 		</div>
-		<div class="detail">
-			<Clear></Clear>
-			<Mineitem link="/mine" content="类别设置" iconfont="icon-fenlei"></Mineitem>
-			<Clear></Clear>
-			<Mineitem link="/mine" content="类别设置" iconfont="icon-fenlei"></Mineitem>
-			<Mineitem link="/mine" content="类别设置" iconfont="icon-fenlei"></Mineitem>
-
-		</div>
+	</div>
+	<div class="detail">
+		<Clear></Clear>
+		<Mineitem link="/mine" content="类别设置" iconfont="icon-fenlei"></Mineitem>
+		<Clear></Clear>
+		<Mineitem link="/mine" content="类别设置" iconfont="icon-fenlei"></Mineitem>
+		<Mineitem link="/mine" content="类别设置" iconfont="icon-fenlei"></Mineitem>
+	</div>
 	</div>
 </template>
 <script>
-import Clear from './Clear'
-import Mineitem from './Mineitem'
+import Clear from '@/components/Clear/Clear'
+import Mineitem from '@/components/Mineitem/Mineitem'
 export default {
 	components: {
 		Clear,

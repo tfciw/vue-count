@@ -12,13 +12,16 @@
 				<li v-for="i in 10">
 					<span class="title">午餐</span>
 				</li>
+				<li v-for="i in 10">
+					<span class="title">晚餐</span>
+				</li>
 			</ul>
 		</div>
-		<Calculator v-if="isChecked" :oCal="oCal" @_cancelChecked="cancelChecked"></Calculator>
+		<Calculator v-if="isChecked" :oCal="oCal" @_cancelChecked="cancelChecked" @refresh="refresh"></Calculator>
 	</div>
 </template>
 <script>
-import Calculator from '@/components/Calculator'
+import Calculator from '@/components/Calculator/Calculator'
 export default {
 	data: function() {
 		return {
@@ -58,6 +61,9 @@ export default {
 				$('#count .categorys li').removeClass('active')
 			}
 			$('#count').animate({'top':this.oHeight}, 'fast', 'linear')
+		},
+		refresh() {
+			this.$emit('refresh')
 		}
 	}
 }

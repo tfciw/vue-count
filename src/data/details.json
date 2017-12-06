@@ -1,115 +1,125 @@
 {
 	"code": 0,
-	"details": [
+	"data": [
 		{
-			"id": "20171118-akcDa5DQ4",
-			"for": "out",
-			"date": "2017年11月18日 星期六",
-			"year": "2017",
-			"month": "11",
-			"day": "18",
-			"category": "早餐",
-			"priceNum": 28,
-			"content": "和燕玲吃了三明治豆浆"
+			"date": "2017年12月1日",
+			"inOrOut": "收入",
+			"money": 1473,
+			"details": [
+				{
+					"id": "20161118-akcDa5DQ4",
+					"for": "-",
+					"date": "2016年10月18日",
+					"year": "2016",
+					"month": "10",
+					"day": "18",
+					"category": "早餐",
+					"priceNum": 12,
+					"content": "11月工资"
+				},
+				{
+					"id": "20161118-akcDa5DQ4",
+					"for": "+",
+					"date": "2016年10月18日",
+					"year": "2016",
+					"month": "10",
+					"day": "18",
+					"category": "工资",
+					"priceNum": 1500,
+					"content": "11月工资"
+				},
+				{
+					"id": "20161118-akcDa5DQ4",
+					"for": "-",
+					"date": "2016年10月18日",
+					"year": "2016",
+					"month": "10",
+					"day": "18",
+					"category": "午餐",
+					"priceNum": 15,
+					"content": "11月工资"
+				}
+			]
 		},
 		{
-			"id": "20171118-akcDa5DQ4",
-			"for": "out",
-			"date": "2017年11月18日 星期六",
-			"year": "2017",
-			"month": "11",
-			"day": "18",
-			"category": "午餐",
-			"priceNum": 158,
-			"content": "和燕玲吃了蟹厂长"
+			"date": "2017年12月2日",
+			"inOrOut": "收入",
+			"money": 3173,
+			"details": [
+				{
+					"id": "20161118-akcDa5DQ4",
+					"for": "+",
+					"date": "2016年10月18日",
+					"year": "2016",
+					"month": "10",
+					"day": "18",
+					"category": "工资",
+					"priceNum": 3200,
+					"content": "11月工资"
+				},
+				{
+					"id": "20161118-akcDa5DQ4",
+					"for": "+",
+					"date": "2016年10月18日",
+					"year": "2016",
+					"month": "10",
+					"day": "18",
+					"category": "工资",
+					"priceNum": 3200,
+					"content": "11月工资"
+				},
+				{
+					"id": "20161118-akcDa5DQ4",
+					"for": "+",
+					"date": "2016年10月18日",
+					"year": "2016",
+					"month": "10",
+					"day": "18",
+					"category": "工资",
+					"priceNum": 3200,
+					"content": "11月工资"
+				}
+			]
 		},
 		{
-			"id": "20171118-akcDa5DQ4",
-			"for": "in",
-			"date": "2017年11月18日 星期六",
-			"year": "2017",
-			"month": "11",
-			"day": "18",
-			"category": "工资",
-			"priceNum": 3200,
-			"content": "11月工资"
-		},
-		{
-			"id": "20171118-akcDa5DQ4",
-			"for": "in",
-			"date": "2017年11月18日 星期六",
-			"year": "2017",
-			"month": "11",
-			"day": "18",
-			"category": "工资",
-			"priceNum": 3200,
-			"content": "11月工资"
-		},
-		{
-			"id": "20171118-akcDa5DQ4",
-			"for": "in",
-			"date": "2017年10月18日 星期六",
-			"year": "2017",
-			"month": "10",
-			"day": "18",
-			"category": "工资",
-			"priceNum": 3200,
-			"content": "11月工资"
-		},
-		{
-			"id": "20171118-akcDa5DQ4",
-			"for": "in",
-			"date": "2017年10月18日 星期六",
-			"year": "2017",
-			"month": "10",
-			"day": "18",
-			"category": "工资",
-			"priceNum": 3200,
-			"content": "11月工资"
-		},
-		{
-			"id": "20171118-akcDa5DQ4",
-			"for": "in",
-			"date": "2017年9月18日 星期六",
-			"year": "2017",
-			"month": "9",
-			"day": "18",
-			"category": "工资",
-			"priceNum": 3200,
-			"content": "11月工资"
-		},
-		{
-			"id": "20171118-akcDa5DQ4",
-			"for": "in",
-			"date": "2017年9月18日 星期六",
-			"year": "2017",
-			"month": "9",
-			"day": "18",
-			"category": "工资",
-			"priceNum": 3200,
-			"content": "11月工资"
-		},
-		{
-			"id": "20161118-akcDa5DQ4",
-			"for": "in",
-			"date": "2016年10月18日 星期六",
-			"year": "2016",
-			"month": "10",
-			"day": "18",
-			"category": "工资",
-			"priceNum": 3200,
-			"content": "11月工资"
-		},
-		{
-			"id": "20161118-akcDa5DQ4",
-			"for": "in",
-			"date": "2016年10月18日 星期六",
-			"year": "2016",
-			"month": "10",
-			"day": "18",
-			"category": "工资",
-			"priceNum": 3200,
-			"content": "11月工资"
+			"date": "2017年12月3日",
+			"inOrOut": "收入",
+			"money": 2950,
+			"details": [
+				{
+					"id": "20161118-akcDa5DQ4",
+					"for": "-",
+					"date": "2016年10月18日",
+					"year": "2016",
+					"month": "10",
+					"day": "18",
+					"category": "午餐",
+					"priceNum": 12,
+					"content": "11月工资"
+				},
+				{
+					"id": "20161118-akcDa5DQ4",
+					"for": "-",
+					"date": "2016年10月18日",
+					"year": "2016",
+					"month": "10",
+					"day": "18",
+					"category": "淘宝",
+					"priceNum": 238,
+					"content": "11月工资"
+				},
+				{
+					"id": "20161118-akcDa5DQ4",
+					"for": "+",
+					"date": "2016年10月18日",
+					"year": "2016",
+					"month": "10",
+					"day": "18",
+					"category": "工资",
+					"priceNum": 3200,
+					"content": "11月工资"
+				}
+			]
 		}
 	]
 }

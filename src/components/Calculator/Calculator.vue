@@ -55,13 +55,36 @@ export default {
 			oldmask: '',
 			mask: '',
 			defaultItem: 'firstNo',
-			btnText: '完成',
-			time: Date() 
+			btnText: '完成'
 		}
 	},
 	mounted: function () {
 	},
 	methods: {
+		addData(lastData) {
+			let data = JSON.parse(localStorage.getItem('detailsList'))
+			let isNew = true
+			data.map( (item) => {
+				if(item.date === lastData.date) {
+					item.details.push(lastData)
+					localStorage.setItem('detailsList',JSON.stringify(data))
+					this.$emit('refresh')
+					isNew = false
+				}
+			})
+			if(isNew) {
+				data.push({
+					"date": lastData.date,
+					"inOrOut": "收入",
+					"money": 1473,
+					"details": [
+						lastData
+					]
+				})
+				localStorage.setItem('detailsList',JSON.stringify(data))
+				this.$emit('refresh')
+			}
+		},
 		changeNo(i, defaultItem) {
 			this[defaultItem] += i
 		},
@@ -114,9 +137,25 @@ export default {
 		},
 		calDone() {
 			if(this.firstNo !== '' && this.mask == '') {
-				console.log(this.firstNo)//提交最终记账
-				console.log(this.oCal)//提交最终记账
-				console.log(this.time)//提交最终记账
+				// 提交最终记账
+				// firstNo 数额
+				// oCal 分类
+				// date 具体时间
+				var date = new Date()
+				var trueDate = date.getFullYear() + '年' + (date.getMonth() + 1) + '月' + date.getDate() + '日'
+				var lastData = {
+					"id": "20161118-akcDa5DQ4",
+					"for": "-",
+					"date": trueDate,
+					"year": date.getFullYear(),
+					"month": date.getMonth() + 1,
+					"day": date.getDate(),
+					"category": this.oCal,
+					"priceNum": Number(this.firstNo),
+					"content": this.oCal
+				}
+				// console.log(lastData)
+				this.addData(lastData)
 				this.$emit('_cancelChecked')
 			}
 			if(this.secondNo !== '') {

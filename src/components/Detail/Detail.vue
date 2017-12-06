@@ -28,88 +28,15 @@
 				</div>
 			</div>
 			<div class="details_list">
-				<div class="items">
+				<div class="items" v-for="(i,indexi) in getDeatils" :key="indexi">
 					<div class="date">
-						<p>10月12日 星期四</p>
-						<p class="right">支出：10</p>
+						<p>{{i.date}}</p>
+						<p class="right">{{i.inOrOut}}：{{i.money}}</p>
 					</div>
-					<a href="" class="item">
+					<a href="" class="item" v-for="(a,indexa) in i.details" :key="indexa">
 						<span class="iconfont"></span>
-						<span class="content">午饭</span>
-						<span class="num">-10</span>
-					</a>
-					<a href="" class="item">
-						<span class="iconfont"></span>
-						<span class="content">午饭</span>
-						<span class="num">+10</span>
-					</a>
-					<a href="" class="item">
-						<span class="iconfont"></span>
-						<span class="content">午饭</span>
-						<span class="num">-10</span>
-					</a>
-				</div>
-				<div class="items">
-					<div class="date">
-						<p>10月12日 星期四</p>
-						<p class="right">支出：10</p>
-					</div>
-					<a href="" class="item">
-						<span class="iconfont"></span>
-						<span class="content">午饭</span>
-						<span class="num">-10</span>
-					</a>
-					<a href="" class="item">
-						<span class="iconfont"></span>
-						<span class="content">午饭</span>
-						<span class="num">+10</span>
-					</a>
-					<a href="" class="item">
-						<span class="iconfont"></span>
-						<span class="content">午饭</span>
-						<span class="num">-10</span>
-					</a>
-				</div>
-				<div class="items">
-					<div class="date">
-						<p>10月12日 星期四</p>
-						<p class="right">支出：10</p>
-					</div>
-					<a href="" class="item">
-						<span class="iconfont"></span>
-						<span class="content">午饭</span>
-						<span class="num">-10</span>
-					</a>
-					<a href="" class="item">
-						<span class="iconfont"></span>
-						<span class="content">午饭</span>
-						<span class="num">+10</span>
-					</a>
-					<a href="" class="item">
-						<span class="iconfont"></span>
-						<span class="content">午饭</span>
-						<span class="num">-10</span>
-					</a>
-				</div>
-				<div class="items">
-					<div class="date">
-						<p>10月12日 星期四</p>
-						<p class="right">支出：10</p>
-					</div>
-					<a href="" class="item">
-						<span class="iconfont"></span>
-						<span class="content">午饭</span>
-						<span class="num">-10</span>
-					</a>
-					<a href="" class="item">
-						<span class="iconfont"></span>
-						<span class="content">午饭</span>
-						<span class="num">+10</span>
-					</a>
-					<a href="" class="item">
-						<span class="iconfont"></span>
-						<span class="content">午饭</span>
-						<span class="num">-10</span>
+						<span class="content">{{a.category}}</span>
+						<span class="num">{{a.for}}{{a.priceNum}}</span>
 					</a>
 				</div>
 			</div>
@@ -121,7 +48,7 @@ import details from '@/data/details.json'
 export default {
 	data: function() {
 		return {
-			detailsList: {}
+			detailsList: this.$store.state.detailsList
 		}
 	},
 	props: {
@@ -131,12 +58,15 @@ export default {
 		}
 	},
 	created: function() {
-		this.getDeatils()
+		console.log(this.detailsList)
 	},
-	methods: {
+	computed: {
 		getDeatils() {
-			this.detailsList = details.details
-			// console.log(this.detailsList);
+			if(!localStorage.getItem('detailsList')) {
+				var data = JSON.stringify(details.data)
+				localStorage.setItem('detailsList', data)
+			}
+			return JSON.parse(localStorage.getItem('detailsList'))
 		},
 	}
 }
@@ -224,7 +154,7 @@ export default {
 		border-radius: 15px;
 		left: 14px;
 		top: 10px;
-		background: url('../common/images/meal.png') center no-repeat;
+		background: url('../../common/images/meal.png') center no-repeat;
 	}
 	.details_list .items .item .num{
 		float: right;

@@ -8,6 +8,8 @@
 }
 #app{
 	position: relative;
+	width: 100%;
+	overflow-x: hidden;
 }
 #main{
 	overflow: scroll;
@@ -21,4 +23,35 @@
 }
 a{
 	text-decoration: none
+}
+.router-view {
+	width: 100%;
+}
+.pop-out-enter-active,
+.pop-out-leave-active,
+.pop-in-enter-active,
+.pop-in-leave-active {
+	will-change: transform;
+	transition: all 500ms;
+	height: 100%;
+	top: 0;
+	position: absolute;
+	backface-visibility: hidden;
+	perspective: 1000;
+}
+.pop-out-enter {
+	opacity: 0;
+	transform: translate3d(-100%, 0, 0);
+}
+.pop-out-leave-active {
+	opacity: 0;
+	transform: translate3d(100%, 0, 0);
+}
+.pop-in-enter {
+	opacity: 0;
+	transform: translate3d(100%, 0, 0);
+}
+.pop-in-leave-active {
+	opacity: 0;
+	transform: translate3d(-100%, 0, 0);
 }
